@@ -1,0 +1,69 @@
+{
+    "name": "ng-demo-version-app",
+    "version": "0.0.0",
+    "author": {
+        "name": "Lev Gelfenbuim",
+        "email": "levz0r@gmail.com"
+    },
+    "description": "A simple Angular web app which displays a version number. The version number is increased on every build.",
+    "homepage": "https://github.com/levz0r/ng-demo-version-app",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/levz0r/ng-demo-version-app.git"
+    },
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "npm run build:dev",
+        "build:dev": "npm run ng:bump-version:dev && ng build",
+        "build:prod": "npm run ng:bump-version:prod && ng build --prod",
+        "build:gh": "npm run ng:bump-version:prod && ng build --prod --base-href=https://github.com/levz0r/ng-demo-version-app && npm run copy:dist",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "ng:bump-version:dev": "gulp ng-bump-version --configuration=staging",
+        "ng:bump-version:prod": "gulp ng-bump-version --configuration=prod",
+        "copy:dist": "cpy dist/ng-demo-version-app ."
+    },
+    "private": false,
+    "dependencies": {
+        "@angular/animations": "^6.0.3",
+        "@angular/common": "^6.0.3",
+        "@angular/compiler": "^6.0.3",
+        "@angular/core": "^6.0.3",
+        "@angular/forms": "^6.0.3",
+        "@angular/http": "^6.0.3",
+        "@angular/platform-browser": "^6.0.3",
+        "@angular/platform-browser-dynamic": "^6.0.3",
+        "@angular/router": "^6.0.3",
+        "core-js": "^2.5.4",
+        "rxjs": "6.0.0",
+        "zone.js": "^0.8.26"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "~0.6.6",
+        "@angular/cli": "~6.0.7",
+        "@angular/compiler-cli": "^6.0.3",
+        "@angular/language-service": "^6.0.3",
+        "@types/jasmine": "~2.8.6",
+        "@types/jasminewd2": "~2.0.3",
+        "@types/node": "~8.9.4",
+        "codelyzer": "~4.2.1",
+        "cpy": "^7.1.0",
+        "cpy-cli": "^2.0.0",
+        "gulp": "^4.0.0",
+        "gulp-replace": "^1.0.0",
+        "jasmine-core": "~2.99.1",
+        "jasmine-spec-reporter": "~4.2.1",
+        "karma": "~1.7.1",
+        "karma-chrome-launcher": "~2.2.0",
+        "karma-coverage-istanbul-reporter": "~2.0.0",
+        "karma-jasmine": "~1.1.1",
+        "karma-jasmine-html-reporter": "^0.2.2",
+        "minimist": "^1.2.0",
+        "protractor": "~5.3.0",
+        "ts-node": "~5.0.1",
+        "tslint": "~5.9.1",
+        "typescript": "~2.7.2"
+    }
+}
