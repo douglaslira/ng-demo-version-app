@@ -17,7 +17,7 @@
         "build": "npm run build:dev",
         "build:dev": "npm run ng:bump-version:dev && ng build",
         "build:prod": "npm run ng:bump-version:prod && ng build --prod",
-        "build:gh": "npm run ng:bump-version:prod && ng build --prod --base-href=https://github.com/levz0r/ng-demo-version-app && npm run copy:dist",
+        "build:gh": "npm run ng:bump-version:prod && ng build --prod --base-href=https://github.com/levz0r/ng-demo-version-app/ && npm run copy:dist",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
