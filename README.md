@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Demo
 
-`[https://levz0r.github.io/ng-demo-version-app/index.html](https://levz0r.github.io/ng-demo-version-app/index.html)`
+[https://levz0r.github.io/ng-demo-version-app/index.html](https://levz0r.github.io/ng-demo-version-app/index.html)
 
 ## Development server
 
