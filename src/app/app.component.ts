@@ -12,4 +12,8 @@ export class AppComponent implements OnInit {
         this.version = environment.version;
         this.title.setTitle(`NgDemoVersionApp v${this.version}`);
     }
+
+    public throwError(): void {
+        throw Error("Error test!");
+    }
 }
